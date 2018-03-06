@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>搜索-{aspcms:sitetitle}</title>
+    <meta name="Keywords" content="{aspcms:sortkeyword}">
+    <meta name="Description" content="{aspcms:sortdesc}">
+    <meta name="generator" content="ASPCMS! V2" />
+    <meta name="author" content="ASPCMS! Team and Chancoo UI Team" />
+    <meta name="copyright" content="2006-2013 Chancoo Inc." />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <META content="MSHTML 6.00.3790.4807" name=GENERATOR>
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/metinfo_ui.css" id="metuimodule" data-module="2" />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/css/metinfo.css" />
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jQuery1.7.2.js" type="text/javascript"></script>
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/metinfo_ui.js" type="text/javascript"></script>
+    <!--[if IE]>
+<script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+<body>
+    {aspcms:top}
+    <div class="inner met_flash">
+        <div class="flash"> <img src='{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/banner1.jpg' width='990' alt='' height='200'></div>
+    </div>
+    <div class="sidebar inner">
+        {aspcms:template src=other_left.html}
+        <div class="sb_box br-bg">
+            <h3 class="title">
+                <div class="position">当前位置：<a href="/" title="首页">首页</a> 搜索</div>
+                <span>搜索结果</span> </h3>
+            <div class="clear"></div>
+            <div class="active" id="newslist">
+                <ul class='list-none metlist'>
+                    {aspcms:searchlist size=15 order=order}
+                    <li class='list top'><span>[searchlist:date style=yy-m-d]</span><a href='[searchlist:link]' title='[searchlist:title]' target='_self'>[searchlist:title]</a>
+                        <p>[searchlist:desc len=50]</p>
+                    </li>
+                    {/aspcms:searchlist}
+                </ul>
+                <div id="flip">
+                    <div class='digg4 metpager_8'>[searchlist:pagenumber size=5]</div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    {aspcms:foot}
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/js/fun.inc.js" type="text/javascript"></script>
+</body>
+
+</html>

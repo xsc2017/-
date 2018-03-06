@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>[news:title]-{aspcms:sortname}-{aspcms:sitetitle}- Powered by ASPCMS V2</title>
+    <meta name="Keywords" content="[news:keyword]">
+    <meta name="Description" content="[news:desc]">
+    <meta name="generator" content="ASPCMS! V2" />
+    <meta name="author" content="ASPCMS! Team and Chancoo UI Team" />
+    <meta name="copyright" content="2006-2013 Chancoo Inc." />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <META content="MSHTML 6.00.3790.4807" name=GENERATOR>
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/metinfo_ui.css" id="metuimodule" data-module="3" />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/css/metinfo.css" />
+    <link rel="stylesheet" type="text/css" href="/css/pro.css" />
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jQuery1.7.2.js" type="text/javascript"></script>
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/metinfo_ui.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/pro.js"></script>
+    <!--[if IE]>
+<script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+    <style>
+        .spic {
+            margin-right: 5px;
+        }
+        
+        .spic a img {
+            -moz-opacity: 0.5;
+            filter: alpha(opacity=50);
+            border: 0px;
+        }
+        
+        .spic a:hover {
+            font-size: 9px;
+        }
+        
+        .spic a:hover img {
+            -moz-opacity: 0.5;
+            filter: alpha(opacity=100);
+            cursor: hand;
+        }
+        
+        #view_bigimg {
+            display: block;
+            margin: 0px auto;
+            font-size: 0px;
+        }
+        
+        .smallimg {
+            margin-top: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    {aspcms:top}
+    <div class="inner met_flash">
+        <div class="flash"> <img src='{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/banner1.jpg' width='990' alt='' height='200'></div>
+    </div>
+
+    <div class="sidebar inner">
+        {aspcms:template src=left.html}
+        <div class="sb_box br-bg">
+            <h3 class="title">
+                <div class="position">当前位置：<a href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}//" title="首页">首页</a> {aspcms:position}&gt; [position:link]{/aspcms:position}</div>
+                <span>{aspcms:sortname}</span> </h3>
+            <div class="clear"></div>
+
+            <div class="active" id="showproduct">
+                <h1 class='title'>[news:title]</h1>
+                <dl class='pshow'>
+                    <dt style="_width:300px;">
+                      <script  LANGUAGE='JavaScript'>
+                            function metseeBig(nowimg,mgrc) {
+                                document.getElementById('view_img').src=document.getElementById(nowimg).src;
+                                $('#view_bigimg').attr('href',mgrc);
+                            }
+                      </script> 
+                      <span class='info_img' id='imgqwe'><a id='view_bigimg' href='[news:pic]' title=查看大图 target='_blank'><img id='view_img' border='0' alt='[news:title]' title='[news:title]' width=300 height=240 src='[news:pic]'></a></span> 
+                      <script type='text/javascript'>var zoomImagesURI   = '{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/';</script> 
+                      <script src='{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/metzoom.js' language='JavaScript' type='text/javascript'></script> 
+                      <script src='{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/metzoomHTML.js' language='JavaScript' type='text/javascript'></script> 
+                      <script type='text/javascript'>	window.onload==setupZoom();	</script>
+                      <div class='smallimg' style='width:300px;'> {aspcms:cimages count=10 contentid=[news:id]}<span class='spic'><a href='javascript:;' onclick=metseeBig('smallimg1','[cimages:src]') title='[news:title]' style='cursor:pointer'><img border='0'  id='smallimg1' src='[cimages:src]' width='50' height='50' alt='[news:title]' title='[news:title]' ></a></span> {/aspcms:cimages}</div>
+                    </dt>
+                    <dd>
+                        <ul class="list-none">
+                            <li><span> 发布时间</span>[news:date]
+                                <div style="clear:both;"></div>
+                            </li>
+                            <li><span>发布作者</span>[news:author]
+                                <div style="clear:both;"></div>
+                            </li>
+                            <li><span>产品点击</span>[news:visits]
+                                <div style="clear:both;"></div>
+                            </li>
+                            <li>
+                                <span>参考价格</span>
+                                {if:"[news:P_Price]"<>""}
+                                    [news:P_Price]
+                                {else}
+                                    未定价
+                                {end if}
+                                <div style="clear:both;"></div>
+                            </li>
+                            <li id="choose-amount" clstag="shangpin|keycount|bookitemnew|1301">
+                                <input type="hidden" name="proid" id="proid" value="[news:id]" />
+                                <div class="dt mod-detail-sku-batch"><span>购买数量：</span>
+                                    <div class="input-box"> <a title="减一" class="amount-down" href="#" rel="nofollow">－</a>
+                                        <div class="d-sku-batch-inputbox">
+                                            <input class="amount-input" value="1" type="text" maxlength="10" data-count="200" data-price="[news:P_Price]" />
+                                        </div>
+                                        <a title="加一" class="amount-up" href="#" rel="nofollow">+</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <div class="godsbtn">
+                                <div class="godsbtn_n">
+                                    <a href="#" class="do-cart">加入购物车</a>
+                                    <a href="#" class="do-buy"> 直接购买</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </dd>
+                </dl>
+                <div style="clear:both;"></div>
+                <h3 class="sl-ti"> <a href="javascript:;" title="产品详细" class="hover">产品详细</a>
+                    <div class="clear"></div>
+                </h3>
+                <div class="editor" id="metbox">
+                    <div class="box">
+                        <div>[news:info]
+                            <div id="metinfo_additional"></div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="met_hits">
+                    <div class='metjiathis'>
+                        <div class="jiathis_style"><span class="jiathis_txt" style="float:left">分享到：</span><span class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></span>
+                            <script>
+                                window._bd_share_config = {
+                                    "common": {
+                                        "bdSnsKey": {},
+                                        "bdText": "",
+                                        "bdMini": "2",
+                                        "bdPic": "",
+                                        "bdStyle": "0",
+                                        "bdSize": "16"
+                                    },
+                                    "share": {}
+                                };
+                                with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+
+                            </script>
+                        </div>
+                    </div>
+                    <span style="float:right;">点击次数：<span>点击代码</span>&nbsp;&nbsp;更新时间：[news:date]&nbsp;&nbsp;【<a href="javascript:window.print()">打印此页</a>】&nbsp;&nbsp;【<a href="javascript:self.close()">关闭</a>】</span>
+                </div>
+                <div class="met_page">上一条：{aspcms:prev}&nbsp;&nbsp;下一条：{aspcms:next}</div>
+                <h4 class="related"><span>相关文章</span></h4>
+                <div class="flip">
+                    <p id="trigger"></p>
+                    <a class="prev" id="car_prev" href="javascript:void(0);"></a>
+                    <a class="next" id="car_next" href="javascript:void(0);"></a>
+                </div>
+                <div class='relatedlist' id="rl-product" data-lrpronum="4">
+                    <ul class='list-none metlist'>
+                        {aspcms:content sort={aspcms:sortid} num=10 order=order}
+                        <li class='list' style='width:152px; margin-left:10px; margin-right:10px;'>
+                            <a href='[content:link]' title='[content:title]' target='_self' class='img'><img src='[content:pic]' alt='[content:title]' title='[content:title]' width='150' height='120' /></a>
+                            <h3><a href="[content:link]" title='[content:title]' target='_self'>[content:title len=12]</a></h3>
+                        </li>
+                        {/aspcms:content}
+
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    {aspcms:foot}
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/js/fun.inc.js" type="text/javascript"></script>
+    <div class="ui-dialog ui-draggable" style="left: 751px; top: 312px; position: fixed; z-index: 2006; text-align:left;">
+        <div class="widget-dialog purchase-dialog fd-hide">
+            <div class="dialog-tit">
+                <h3>加入成功</h3>
+                <a title="关闭" class="close-btn" href="#" target="_self" rel="nofollow">×</a>
+            </div>
+            <div class="dialog-con">
+                <div class="d-cart" id="J_ActionPanel">
+                    <div class="cart-wrap">
+                        <h4><em>货品已成功添加到进货单！</em></h4>
+                        <p>进货单共0种货品<span>合计：<b>0.00</b>元</span></p>
+                        <div class="opration"><span><a class="btn btn-orange view-cart" href="/order/"  trace="viewcart1">去结算</a></span><span><a class="long-buy" href="#" target="_self" trace="goonpurchase1">继续购物</a></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

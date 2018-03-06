@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>{aspcms:sitetitle}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/css/flexslider.css" media="screen" />
+    <!--[if lt IE 9]>
+		<script src="../../../../html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div id="wrapper">
+        {aspcms:top}
+        <!--Section Starts-->
+        <section id="main">
+            <!--Block Starts-->
+            <div id="slideshow" class="block_module paper_bh_white flexslider">
+                <h2>欢迎访问{aspcms:sitetitle}</h2>
+                <ul id="slider" class="slides">
+                    {aspcms:slidelist id=4}
+                    <li><img src="[slidelist:pic]" alt="[slidelist:title]" /></li>
+                    {/aspcms:slidelist}
+                </ul>
+
+            </div>
+            <!--Block Ends-->
+            <!--Block Starts-->
+            <div class="block_module paper_bh_white">
+                {aspcms:content sort=5 num=1 }
+                <h2>[content:title]</h2>
+                <img class="stretch" alt="" src="[content:pic]" />
+                <div class="content_container">
+                    [content:desc len=400]
+                    <p class="center"><a href="[content:sortlink]" class="grey_bt_big btn"><span class="app"></span>查看更多新闻</a></p>
+                </div>
+                {/aspcms:content}
+            </div>
+            <!--Block Ends-->
+            <!--Block Starts-->
+            <div class="block_module paper_bh_white">
+                <h2>产品导航</h2>
+                <div id="accordion_menu">
+                    {aspcms:navlist type=5}
+                    <h5>[navlist:name] <span class="arrow"></span></h5>
+                    <div class="ac_content">
+                        <p>[navlist:desc]</p>
+                        <ul>
+                            {aspcms:content sort=[navlist:sortid]}
+                            <li><a href="[content:link]">[content:title]</a></li>
+                            {/aspcms:content}
+                        </ul>
+                    </div>
+                    {/aspcms:navlist}
+                </div>
+            </div>
+            <!--Block Ends-->
+            <!--Block Starts-->
+            <div class="block_module paper_bh_white hiring"> <span class="tape_stick"></span> {aspcms:about sort=19}
+                <h2>[about:title]</h2>
+                <a class="grey_bt_sml btn" href="[about:link]">更多</a>
+                <div class="content_container"> <img alt="" src="[about:pic]" width="80px" /> [about:desc len=200] </p>
+                </div>
+                {/aspcms:about}
+            </div>
+            <!--Block Ends-->
+        </section>
+        <!--Section Ends-->
+        {aspcms:foot}
+    </div>
+    <!-- JQuery -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/js/jquery.min.js"></script>
+
+    <!-- JQueryUI -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/js/jquery-ui-1.8.16.custom.min.js"></script>
+
+    <!--Simple Carousel-->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/js/jquery.flexslider.js"></script>
+
+    <!-- Script Controls -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/js/site.js"></script>
+    <script type="text/javascript">
+        /* Slideshow Control */
+        jQuery('.flexslider').flexslider();
+
+    </script>
+</body>
+
+</html>

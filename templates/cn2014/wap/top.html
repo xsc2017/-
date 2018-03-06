@@ -1,0 +1,46 @@
+<!--Header Starts-->
+<header>
+    <ul class="navigation">
+        <li {if:{aspcms:topsortid}=0}class="active" {end if}><a href="/wap"><span class="nav_icon home"></span> 首页</a></li>
+        <li {if:{aspcms:topsortid}=19}class="active" {end if}>
+            {aspcms:type sort=19}
+            <a href="[type:link]"><span class="nav_icon about"></span> 关于</a> {/aspcms:type}
+        </li>
+        <li class="dropdown {if:{aspcms:topsortid}=5}active{end if}"><a href="javascript:void(0);"><span class="nav_icon blog"></span> 产品</a>
+            <!--Submenu-->
+            <ul id="submenu">
+                {aspcms:navlist type=5}
+                <li> <a href="[navlist:link]">[navlist:name]</a></li>
+                {/aspcms:navlist}
+            </ul>
+        </li>
+        <!--Submenu-->
+        <li {if:{aspcms:topsortid}=18}class="active" {end if}><a href="/wap/gbook"><span class="nav_icon contact"></span> 联系</a></li>
+        <li class="nav_search">
+            <a href="#"></a>
+        </li>
+    </ul>
+    <!--Search starts-->
+    <div id="search">
+        <form class="search" action="about.html">
+            <fieldset class=" ">
+                <input type="text" placeholder="search" class="text ">
+                <input type="submit" value="search" class="submit">
+            </fieldset>
+        </form>
+    </div>
+    <!--Search ends-->
+    <ul class="share">
+        <li class="twitter">
+            <a href="#"></a>
+        </li>
+        <li class="facebook">
+            <a href="#"></a>
+        </li>
+        <li class="rss">
+            <a href="#"></a>
+        </li>
+    </ul>
+    <a href="#" title="Back to Home page" id="logo"><img alt="" height="60px;" src="{aspcms:sitelogo}" /></a>
+</header>
+<!--Header Ends-->

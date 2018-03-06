@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{aspcms:sortname}-{aspcms:sitetitle}</title>
+    <meta name="Keywords" content="[content:keyword]">
+    <meta name="Description" content="[content:desc]">
+    <meta name="generator" content="ASPCMS! V2" />
+    <meta name="author" content="ASPCMS! Team and Chancoo UI Team" />
+    <meta name="copyright" content="2006-2013 Chancoo Inc." />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/metinfo_ui.css" id="metuimodule" data-module="7" />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/css/metinfo.css" />
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jQuery1.7.2.js" type="text/javascript"></script>
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/metinfo_ui.js" type="text/javascript"></script>
+    <!--[if IE]> 
+<script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+</head>
+
+<body>
+    {aspcms:top}
+    <div class="inner met_flash">
+        <div class="flash"> <img src='{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/banner1.jpg' width='990' alt='' height='200'></div>
+    </div>
+    <div class="sidebar inner"> {aspcms:template src=left.html}
+        <div class="sb_box br-bg">
+            <h3 class="title">
+                <div class="position">当前位置：<a href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}//" title="首页">首页</a> {aspcms:position}&gt; [position:link]{/aspcms:position}</div>
+                <span>{aspcms:sortname}</span> </h3>
+            <div class="clear"></div>
+            <div class="active" id="messagelist">
+
+                <h3 class="ctitle">提交留言</h3>
+                <form method='POST' name='myform' onSubmit='return metmessagesubmit("姓名不能为空","留言信息不能为空");' action="save.asp?action=add" target='_self'>
+                    <table class='message_table'>
+                        <tr>
+                            <td class='text'>代码证编号</td>
+                            <td class='input'><input name='FaqTitle' type='text' class='input-text' />
+                                <span class='info'>*</span></td>
+                        </tr>
+                        <tr>
+                            <td class='text'>公 司 规 模</td>
+                            <td class='input'><input name='Contact' type='text' class='input-text' />
+                                <span class='info'>*</span></td>
+                        </tr>
+                        <tr>
+                            <td class='text'>公 司行 业</td>
+                            <td class='input'><input name='ContactWay' type='text' class='input-text' /></td>
+                        </tr>
+                        <tr>
+                            <td class='text'></td>
+                            <td class='submint'>
+                                <input type='submit' name='Submit' value='提交留言' class='submit button orange'></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    {aspcms:foot}
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/js/fun.inc.js" type="text/javascript"></script>
+</body>
+
+</html>

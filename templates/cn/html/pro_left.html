@@ -1,0 +1,26 @@
+<div class="sb_nav">
+    <div class="ti1-bg"><span>{aspcms:type sort={aspcms:topsortid}}[type:name]{/aspcms:type}</span></div>
+    <h3 class='title1'></h3>
+    <div class="active" id="sidebar" data-csnow="32" data-class3="0" data-jsok="2">
+    {aspcms:navlist type=5}
+      <dl class="list-none navnow">
+        <dt id='part2_[navlist:sortid]'><a href='[navlist:link]'  title='[navlist:title]' ><span>[navlist:name]</span></a></dt>
+        <dd class="sub" style="display:none;">
+        	{aspcms:content sort=[navlist:sortid] num=10 order=order}
+          <h4 id='part3_49'><a href='[content:link]'  title='[content:title]' class='nav'><span>[content:title len=12]</span></a></h4>
+          	{/aspcms:content}
+        </dd>
+      </dl>
+      {/aspcms:navlist}
+      <div class="clear"></div>
+    </div>
+    <h3 class='title2 line'>联系方式</h3>
+    <div class="active ct-con"><span style="line-height: 2;"><strong><span style="font-size:13px;">{aspcms:companyname}</span></strong><br />
+      地址：{aspcms:companyaddress}</span>
+      <div> 电话：{aspcms:companyphone}</div>
+      <div> 手机：{aspcms:companymobile}</div>
+      <div> E-mail：{aspcms:companyemail}</div>
+      <div> 网站：{aspcms:siteurl}</div>
+      <div class="clear"></div>
+    </div>
+  </div>

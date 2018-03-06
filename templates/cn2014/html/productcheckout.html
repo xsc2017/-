@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>确认订单信息-{aspcms:sitetitle}- Powered by {aspcms:version}</title>
+    <meta name="Keywords" content="{aspcms:sortkeyword}">
+    <meta name="Description" content="{aspcms:sortdesc}">
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/metinfo_ui.css" id="metuimodule" data-module="3" />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/css/metinfo.css" />
+
+    <link type="text/css" href="/css/order.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/front.js"></script>
+    <script type="text/javascript" src="/js/productlist_roll.js"></script>
+    <script type="text/javascript" src="/js/city1688.js"></script>
+
+    <style type="text/css">
+        .ckInput {
+            BORDER: #B7DAEF 1px solid;
+            WIDTH: 150px;
+            height: 18px;
+        }
+        
+        .ckError {
+            color: red;
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    {aspcms:top}
+    <div class="layer layer-guide">
+
+
+        <div class="layout screen">
+
+
+            <div class="mod mod-stage-forward">
+
+
+                <div class="content">
+
+
+                    <div class="unit-stage unit-stage-orange">
+
+
+                        <ul class="list five-stage">
+
+
+                            <li class="stage-node stage-first-pass">
+                                <div class="stage-label">
+                                    我的购物车
+                                </div>
+                            </li>
+
+
+                            <li class="stage-bar stage-bar-pass">
+                                <div class="stage-far"></div>
+                            </li>
+
+
+                            <li class="stage-node stage-current">
+                                <div class="stage-label">
+                                    确认订单信息
+                                </div>
+                            </li>
+
+
+                            <li class="stage-bar stage-bar-then">
+                                <div class="stage-far"></div>
+                            </li>
+
+
+                            <li class="stage-node stage-then">
+                                <div class="stage-label">
+                                    付款
+                                </div>
+                            </li>
+
+
+                            <li class="stage-bar stage-bar-then">
+                                <div class="stage-far"></div>
+                            </li>
+
+
+                            <li class="stage-node stage-then">
+                                <div class="stage-label">
+                                    确认收货
+                                </div>
+                            </li>
+
+
+                            <li class="stage-bar stage-bar-then">
+                                <div class="stage-far"></div>
+                            </li>
+
+
+                            <li class="stage-node stage-last-then">
+                                <div class="stage-label">
+                                    完成
+                                </div>
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="layer layer-main">
+        <div class="layout screen">
+            <form id="frmOrder" name="frmOrder" action="?act=buy" method="post">
+                <input name="orderid" type="hidden" value="{aspcms:order.orderno}" />
+                <div class="layout" id="address">
+
+                    <div class="module mod-layout mod-address">
+                        <div class="header">
+                            <h2>
+                                收货信息
+                            </h2>
+                        </div>
+                        <div class="content">
+                            <div class="container">
+                                <div class="tips fd-gray">
+                                    请填写详细地址
+                                </div>
+                                <div class="zone-editaddress">
+                                    <dl class="fd-clr unit-line">
+                                        <dt>
+        收<span class="letter-2">货</span>人：
+        </dt>
+                                        <dd>
+                                            <input class="input input-large input-username" name="pname" type="text" value="{aspcms:order.username}" maxLength="25" /><span class="msg"></span>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fd-clr unit-line">
+                                        <dt>
+        所在地区：
+        </dt>
+                                        <dd>
+                                            <select class="input-select select-province" name="province"><option value="0">--请选择--</option></select>
+                                            <select class="input-select select-city" name="city"><option value="0">--请选择--</option></select>
+                                            <select class="input-select select-area" name="area"><option value="0">--请选择--</option></select>
+                                            <span class="msg"></span>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fd-clr unit-line">
+                                        <dt>
+        街道地址：
+        </dt>
+                                        <dd>
+                                            <textarea class="input input-large input-address" name="address"></textarea><span class="msg"></span>
+                                        </dd>
+                                    </dl>
+                                    <dl class="fd-clr unit-line">
+                                        <dt>
+        邮<span class="letter-3">编</span>：
+        </dt>
+                                        <dd>
+                                            <input class="input input-large input-post" name="post" type="text" maxLength="10" /><span class="msg"></span>
+                                        </dd>
+                                    </dl>
+                                    <div class="phone-block">
+                                        <dl class="fd-clr unit-line">
+                                            <dt>
+          手<span class="letter-3">机</span>：
+          </dt>
+                                            <dd>
+                                                <input class="input input-large  input-mobile" name="mobile" type="text" maxLength="15" /><span class="msg"></span>
+                                            </dd>
+                                        </dl>
+                                        <dl class="fd-clr unit-line phone-all">
+                                            <dt>
+          固定电话：
+          </dt>
+                                            <dd>
+                                                <input name="phone" type="hidden" maxLength="30" /><input name="phone-postcode" class="input input-large  input-phonecode" type="text" maxLength="30" placeholder="区号" /><span class="split">-</span><input name="phone-number" class="input input-large  input-phonenumber" type="text" maxLength="30" placeholder="电话号码" /><span class="split">-</span><input name="phone-subcode" class="input input-large  input-phonesub" type="text" maxLength="30" placeholder="分机号" /><span class="msg"></span>
+                                            </dd>
+                                        </dl>
+
+                                        <div class="phone-block-tips" style="display: block;">
+                                            <span class="msg">至少填写一个</span>
+                                        </div>
+                                    </div>
+                                    <div class=" fd_clr"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout" id="order">
+                    <div class="module  mod-layout mod-order">
+                        <div class="header">
+                            <h2>
+                                确认订单
+                            </h2>
+                        </div>
+                        <div class="content">
+
+                            <div class="cell-header">
+                            </div>
+                            {aspcms:selectproduct}
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    {aspcms:foot}
+    <script type="text/javascript">
+        var submitok = new Array(false, false, false, true, false);
+
+        function chacksubmit() {
+            var ok = true;
+            for (i = 0; i < 4; i++) {
+                if (submitok[i] == false) {
+                    ok = false;
+                    break;
+                }
+            }
+            if (ok) {
+                $(".order-submit-btn").attr("onclick", "");
+                $(".order-submit-btn").unbind();
+                $(".order-submit-btn").click(function() {
+                    frmOrder.submit();
+                })
+                $(".order-submit-btn").removeClass("unsubmit");
+            } else {
+                $(".order-submit-btn").attr("onclick", "");
+                $(".order-submit-btn").unbind();
+                $(".order-submit-btn").addClass("unsubmit");
+                $(".order-submit-btn").click(function() {
+                    alert('收货信息不完整\r\n请完善您的收货信息')
+                })
+            }
+        }
+
+        $(function() {
+
+
+            var phone = jQuery(".phone-all input");
+            phone.bind("keyup", function() {
+                phone.eq(0).val(phone.eq(1).val() + "-" + phone.eq(2).val() + "-" + phone.eq(3).val())
+            });
+
+            var ipt_text = $(":input.input-address");
+            var ipt_select = $(".input-select");
+            ipt_text.bind("blur change", chacktext);
+            ipt_select.bind("blur change", chackselect);
+            $(".input-username").bind("blur change", function() {
+                var msg = $(this).parent().find(".msg");
+                var reg = /^[\u4e00-\u9fa5]+$/i;
+                var str = $(this).val();
+
+                if ($(this).val() == "") {
+                    msg.html("* 必填，不能为空.");
+                    msg.removeClass("green");
+                    msg.addClass("red");
+                    submitok[0] = false;
+                } else if (!reg.test(str)) {
+                    msg.html("* 请输入中文.");
+                    msg.removeClass("green");
+                    msg.addClass("red");
+                    submitok[0] = false;
+                } else {
+                    msg.html("√ ");
+                    msg.removeClass("red");
+                    msg.addClass("green");
+                    submitok[0] = true;
+
+                }
+                chacksubmit();
+            });
+
+            $(".input-post").bind("blur change", function() {
+                var msg = $(this).parent().find(".msg");
+                var reg = /^[1-9][0-9]{5}$/;
+                var str = $(this).val();
+
+                if ($(this).val() == "") {
+                    msg.html("");
+
+                    submitok[3] = true;
+                } else if (!reg.test(str)) {
+                    msg.html("* 请输入正确的邮编.");
+                    msg.removeClass("green");
+                    msg.addClass("red");
+                    submitok[3] = false;
+                } else {
+                    msg.html("√ ");
+                    msg.removeClass("red");
+                    msg.addClass("green");
+                    submitok[3] = true;
+
+                }
+                chacksubmit();
+            });
+
+
+
+            function chacktext() {
+                var msg = $(this).parent().find(".msg");
+                if ($(this).val() == "") {
+                    msg.html("* 必填，请填写详细地址");
+                    msg.removeClass("green");
+                    msg.addClass("red");
+                    submitok[2] = false;
+                } else {
+                    msg.html("√ ")
+                    msg.removeClass("red");
+                    msg.addClass("green");
+                    submitok[2] = true;
+
+                }
+                chacksubmit();
+            }
+
+            function chackselect() {
+                var msg = $(this).parent().find(".msg");
+                if ($(this).val() == "0" || ipt_select.eq(2).val() == "0") {
+                    msg.html("* 必填，请选择地区.");
+                    msg.removeClass("green");
+                    msg.addClass("red");
+                    submitok[1] = false;
+                } else {
+                    msg.html("√ ");
+                    msg.removeClass("red");
+                    msg.addClass("green");
+                    submitok[1] = true;
+
+                }
+                chacksubmit();
+            }
+
+
+            var tel = $(".phone-block input");
+            var tel_tip = $(".phone-block-tips");
+
+            tel.bind("blur change", function() {
+                var msg = $(".phone-block .msg");
+                var moz = /^(1[0-9]{10})$/;
+                var telpostz = /^(0[1-9][0-9]{1,2})$/;
+                var telz = /^([2-9][0-9]{6,7})$/
+                if (moz.test(tel.eq(0).val()) || telpostz.test(tel.eq(2).val()) && telz.test(tel.eq(3).val())) {
+                    msg.html("")
+                    msg.eq(2).removeClass("red")
+                    msg.eq(2).addClass("green")
+                    msg.eq(2).html("√")
+                    tel_tip.show();
+                    submitok[4] = true;
+
+                } else {
+                    submitok[4] = false;
+                    if (tel.eq(0).val() == "" && tel.eq(2).val() == "" && tel.eq(3).val() == "") {
+                        msg.html("")
+                        msg.eq(2).addClass("red")
+                        msg.eq(2).removeClass("green");
+                        msg.eq(2).html("手机和固话至少填写一个")
+                        tel_tip.show();
+                    } else if (tel.index($(this)) == 0 && $(this).val() != "") {
+                        if (!moz.test($(this).val())) {
+                            tel_tip.hide();
+                            msg.eq(0).html("* 请填写正确的手机号");
+                            msg.eq(0).removeClass("green");
+                            msg.eq(0).addClass("red");
+                        }
+
+                    } else if (tel.index($(this)) == 2 && $(this).val() != "") {
+
+                        if (!telpostz.test($(this).val())) {
+                            tel_tip.hide();
+                            msg.eq(1).html("* 请填写正确区号");
+                            msg.eq(1).removeClass("green");
+                            msg.eq(1).addClass("red");
+                        }
+
+                    } else if (tel.index($(this)) == 3 && $(this).val() != "") {
+                        re = /^([2-9][0-9]{6,7})$/
+                        if (!telz.test($(this).val())) {
+                            tel_tip.hide();
+                            msg.eq(1).html("* 请填写正确的固话");
+                            msg.eq(1).removeClass("green");
+                            msg.eq(1).addClass("red");
+                        }
+                    }
+
+                }
+                chacksubmit();
+
+            })
+
+
+
+
+            chacksubmit();
+        })
+
+    </script>
+    <div class="phone-block-tips" style="display: block;">
+        <span class="msg">至少填写一个</span>
+    </div>
+    </div>
+
+</body>
+
+</html>

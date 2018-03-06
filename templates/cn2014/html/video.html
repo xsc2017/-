@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <META http-equiv=Content-Type content="text/html; charset=utf-8">
+    <title>[news:title]-{aspcms:sortname}-{aspcms:sitetitle}</title>
+    <meta name="Keywords" content="[news:keyword]">
+    <meta name="Description" content="[news:desc]">
+    <meta name="generator" content="ASPCMS! V2" />
+    <meta name="author" content="ASPCMS! Team and Chancoo UI Team" />
+    <meta name="copyright" content="2006-2013 Chancoo Inc." />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <META content="MSHTML 6.00.3790.4807" name=GENERATOR>
+    <link href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/metinfo_ui.css" id="metuimodule" data-module="2" />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/css/metinfo.css" />
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jQuery1.7.2.js" type="text/javascript"></script>
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/metinfo_ui.js" type="text/javascript"></script>
+    <!--[if IE]>
+<script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+    <link href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/video/video-js.css" rel="stylesheet" type="text/css">
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/video/video.js"></script>
+
+    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+    <script>
+        _V_.options.flash.swf = "{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/video/video-js.swf";
+
+    </script>
+</head>
+
+<body>
+    {aspcms:top}
+    <div class="inner met_flash">
+        <div class="flash"> <img src='{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/banner1.jpg' width='990' alt='' height='200'></div>
+    </div>
+    <div class="sidebar inner"> {aspcms:template src=left.html}
+        <div class="sb_box br-bg">
+            <h3 class="title">
+                <div class="position">当前位置：<a href="/" title="首页">首页</a> {aspcms:position}&gt; [position:link]{/aspcms:position}</div>
+                <span>{aspcms:sortname}</span> </h3>
+            <div class="clear"></div>
+            <div class="active" id="shownews">
+                <h1 class="title">[news:title]</h1>
+                <div class="editor">
+                    <div>
+                        <embed height="500" width="680" type="application/x-shockwave-flash" src="http://player.youku.com/player.php/sid/XMzk4NzE0NTY4/v.swf" allowfullscreen="true" allowscriptaccess="always" align="middle" quality="high"></embed>
+                        <div id="metinfo_additional"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="met_hits">
+                    <div class='metjiathis'>
+                        <div class="jiathis_style"><span class="jiathis_txt" style="float:left">分享到：</span><span class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></span>
+                            <script>
+                                window._bd_share_config = {
+                                    "common": {
+                                        "bdSnsKey": {},
+                                        "bdText": "",
+                                        "bdMini": "2",
+                                        "bdPic": "",
+                                        "bdStyle": "0",
+                                        "bdSize": "16"
+                                    },
+                                    "share": {}
+                                };
+                                with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+
+                            </script>
+                        </div>
+                    </div>
+                    <span style="float:right;">点击次数：<span>点击代码</span>&nbsp;&nbsp;更新时间：[news:date]&nbsp;&nbsp;【<a href="javascript:window.print()">打印此页</a>】&nbsp;&nbsp;【<a href="javascript:self.close()">关闭</a>】</span>
+                </div>
+                <div class="met_page">上一条：{aspcms:prev}&nbsp;&nbsp;下一条：{aspcms:next}</div>
+                <h4 class="related"><span>相关文章</span></h4>
+                <div class='relatedlist'>
+                    <ul class='list-none metlist'>
+                        {aspcms:content sort={aspcms:sortid} num=10 order=order}
+                        <li class='list top'><a href='[content:link]' title='[content:title]' target='_self'>[content:title]</a></li>
+                        {/aspcms:content}
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    {aspcms:foot}
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/js/fun.inc.js" type="text/javascript"></script>
+</body>
+
+</html>

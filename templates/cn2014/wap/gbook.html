@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>[content:title]--{aspcms:sortname}--{aspcms:sitetitle}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/css/style.css" media="screen" />
+    <!--[if lt IE 9]>
+		<script src="../../../../html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+    <div id="wrapper">
+        {aspcms:top}
+        <!--Section Starts-->
+        <section id="main">
+            <!--Block Starts-->
+            <div class="block_module paper_bh_white">
+                <div class="page">
+
+                    <h3 class="ctitle">提交留言</h3>
+                    <form method='POST' name='myform' onSubmit='return metmessagesubmit("姓名不能为空","留言信息不能为空");' action="save.asp?action=add" target='_self'>
+                        <table class='message_table'>
+                            <tr>
+                                <td class='text'>标题</td>
+                                <td class='input'><input name='FaqTitle' type='text' class='input-text' />
+                                    <span class='info'>*</span></td>
+                            </tr>
+                            <tr>
+                                <td class='text'>姓名</td>
+                                <td class='input'><input name='Contact' type='text' class='input-text' />
+                                    <span class='info'>*</span></td>
+                            </tr>
+                            <tr>
+                                <td class='text'>电话</td>
+                                <td class='input'><input name='ContactWay' type='text' class='input-text' /></td>
+                            </tr>
+                            <tr>
+                                <td class='text'>留言内容</td>
+                                <td class='input'><textarea name='Content' cols='50' rows='6' class='textarea-text'></textarea>
+                                    <span class='info'>*</span></td>
+                            </tr>
+                            <tr>
+                                <td class='text'>验证码</td>
+                                <td class='input'><input name='code' type='text' class='input-text' /><img src="/inc/checkcode.asp?catch=n" /></td>
+                            </tr>
+                            <tr>
+                                <td class='text'></td>
+                                <td class='submint'>
+                                    <input type='submit' name='Submit' value='提交留言' class='submit button orange'></td>
+                            </tr>
+                        </table>
+                    </form>
+
+                </div>
+            </div>
+            <!--Block Ends-->
+
+        </section>
+        <!--Section Ends-->
+        {aspcms:foot}
+    </div>
+    <!-- JQuery -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/js/jquery.min.js"></script>
+    <!-- 	
+	Simple Carousel
+	Copyright (c) 2010 Tobias Zeising, http://www.aditu.de
+	Licensed under the MIT license
+	
+	http://code.google.com/p/simple-carousel
+-->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/js/slider.js"></script>
+
+    <!-- JQueryUI -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/js/jquery-ui-1.8.16.custom.min.js"></script>
+
+    <!-- Script Controls -->
+    <script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/wap/js/site.js"></script>
+</body>
+
+</html>

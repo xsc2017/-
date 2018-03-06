@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>确认订单信息-{aspcms:sitetitle}- Powered by {aspcms:version}</title>
+    <meta name="Keywords" content="{aspcms:sortkeyword}">
+    <meta name="Description" content="{aspcms:sortdesc}">
+    <link rel="stylesheet" type="text/css" href="/Templates/{aspcms:defaulttemplate}/css/metinfo_ui.css" id="metuimodule" data-module="3" />
+    <link rel="stylesheet" type="text/css" href="/Templates/{aspcms:defaulttemplate}/images/css/metinfo.css" />
+
+
+    <link type="text/css" href="/css/order.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/jquery.1.4.2-min.js"></script>
+    <script type="text/javascript" src="/js/front.js"></script>
+    <script type="text/javascript" src="/js/productlist_roll.js"></script>
+    <script type="text/javascript" src="/js/city1688.js"></script>
+
+    <style type="text/css">
+        .ckInput {
+            BORDER: #B7DAEF 1px solid;
+            WIDTH: 150px;
+            height: 18px;
+        }
+        
+        .ckError {
+            color: red;
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    {aspcms:top}
+    <div class="layer layer-guide">
+
+
+        <div class="layout screen">
+
+
+            <div class="mod mod-stage-forward">
+
+
+                <div class="content">
+
+
+                    <div class="unit-stage unit-stage-orange">
+
+
+                        <ul class="list five-stage">
+
+
+                            <li class="stage-node stage-first-pass">
+                                <div class="stage-label">选择套餐</div>
+                            </li>
+
+
+                            <li class="stage-bar stage-bar-pass">
+                                <div class="stage-far"></div>
+                            </li>
+
+
+                            <li class="stage-node stage-pass">
+                                <div class="stage-label">
+                                    确认订单信息
+                                </div>
+                            </li>
+
+
+                            <li class="stage-bar stage-bar-pass">
+                                <div class="stage-far"></div>
+                            </li>
+
+
+                            <li class="stage-node stage-current">
+                                <div class="stage-label">
+                                    付款
+                                </div>
+                            </li>
+
+
+                            <li class="stage-bar stage-bar-then">
+                                <div class="stage-far"></div>
+                            </li>
+
+
+                            <li class="stage-node stage-then">
+                                <div class="stage-label">配送</div>
+                            </li>
+
+
+                            <li class="stage-bar stage-bar-then">
+                                <div class="stage-far"></div>
+                            </li>
+
+
+                            <li class="stage-node stage-last-then">
+                                <div class="stage-label">
+                                    完成
+                                </div>
+                            </li>
+
+
+                        </ul>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="layer layer-main">
+        <h1>恭喜你，订单已经成功提交！</h1>
+        <h3>请牢记您的订单号：{aspcms:order.no}</h3>
+        <p style="color: #F00; font-weight: bold; font-size: 20px; text-align:center;"> 支付宝支付请在4小时内完成付款， 银行转账请在4小时内联系客服人员。</p>
+        <p style="color: #F00; font-weight: bold; font-size: 20px;"> </p>
+        <div class="layout screen">
+            <form id="frmOrder" name="frmOrder" action="?act=buy" method="post">
+                <input name="orderid" type="hidden" value="{aspcms:order.orderno}" />
+                <div class="layout" id="address">
+
+                    <div class="module mod-layout mod-address">
+                        <div class="header">
+                            <h2>
+                                收货信息
+                            </h2>
+                        </div>
+                        <div class="content">
+                            <div class="container">
+                                <div class="tips fd-gray"></div>
+                                <div class="zone-editaddress" style="width:800px;font-size:24px; font-family:微软雅黑;">
+
+
+                                    <dl class="fd-clr unit-line">
+
+                                        <dd style=" font-weight:bold;width:800px;font-size:24px; font-family:微软雅黑;">
+                                            {aspcms:order.nicename}<br> {aspcms:order.address}
+                                            <br> {aspcms:order.zipcode}
+                                            <br> {aspcms:order.cellphone} {aspcms:order.tel}</dd>
+                                    </dl>
+
+                                    <div class=" fd_clr"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout" id="order">
+                    <div class="module  mod-layout mod-order">
+                        <div class="header">
+                            <h2>
+                                马上付款
+                            </h2>
+                        </div>
+                        <div class="content">
+
+                            <div class="cell-header">
+                            </div>
+                            {aspcms:selectproduct}
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    {aspcms:foot}
+
+
+    </div>
+
+</body>
+
+</html>

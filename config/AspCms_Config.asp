@@ -28,7 +28,7 @@ Const switchSortDefend=0  '栏目保护开关
 Const switchWapDebug=0  '手机版调试
 Const wapDomain="" '手机版域名绑定
 
-Const SwitchNavEn=0	'栏目英文名称（0为关闭，1为开启）
+Const SwitchNavEn=1	'栏目英文名称（0为关闭，1为开启）
 Const switchFaq=0	'留言开关（0为关闭，1为开启）
 Const switchFaqStatus=1 '留言审核开关（0为不启用，1为启用）
 Const switchComments=1	'评论开关（0为关闭，1为开启）

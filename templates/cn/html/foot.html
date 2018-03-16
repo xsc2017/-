@@ -1,36 +1,39 @@
-<DIV class=friendlink >
-    <H3>��������</H3>
-    <UL>
-    {aspcms:linklist  type=pic}      
-        <LI><a href="[linklist:link]" target="_blank"><img style="border: 1px solid #D6EAF1;" src="[linklist:pic]" border="0" height="33" width="100" /></a></LI>
-    {/aspcms:linklist}
-    </UL>
-    <br/>
-    <br/>
-    <UL style="margin-top:5px;">
-    {aspcms:linklist  type=font}
-        <LI><a href="[linklist:link]" target="_blank">[linklist:name]</a></LI>
-    {/aspcms:linklist}
-    </UL>
-</DIV>
-<DIV class=footer>
-    <UL class=footpage>
-        <LI class=nb><a href="{aspcms:sitepath}{aspcms:languagepath}">��ҳ</A></LI>
-        {aspcms:navlist type=0}
-        <LI class="page_item page-item-755"><A href="[navlist:link]">[navlist:name]</A></LI>
-        {/aspcms:navlist}
-    </UL>
-    <P>�绰��{aspcms:companyphone} �� �棺{aspcms:companyfax} �� �䣺{aspcms:companyemail}   </P>
-    <P>{aspcms:copyright} <A href="http://www.miibeian.gov.cn/">{aspcms:companyicp}</A>{aspcms:statisticalcode} </P>
-    <p>
-���գ�{visits:today} 
-���գ�{visits:yesterday} 
-���£�{visits:month} 
-ȫ����{visits:all}  </p>
-</DIV>
-{aspcms:onlineservice}
-{aspcms:kf}
-{aspcms:floatad}
-{aspcms:coupletad}
-{aspcms:windowad}
-{aspcms:statisticalcode} 
+<div class="box_five">
+        <div class="box_five_this">
+            <div class="bf_one">
+                <h5>联系我们</h5>
+                <p>{aspcms:companyname}</p>
+                <span class="bfo_o">地址：{aspcms:companyaddress}</span>
+                <span class="bfo_t">电话：{aspcms:companyphone}</span>
+                <span class="bfo_h">邮箱：{aspcms:companyemail}</span>
+            </div>
+            <div class="bf_two">
+                <h5>快速导航</h5>
+                <ul>
+                    <li><a href="/">网站首页</a></li>           
+                      
+                    <li><a href="/about/?1.html">关于我们</a></li>
+                      
+                    <li><a href="/list/?5_1.html">经典工程</a></li>
+                      
+                    <li><a href="/list/?6_1.html">科技创新</a></li>
+                      
+                    <li><a href="/list/?3_1.html">中联建设报</a></li>
+                      
+                    <li><a href="/list/?11_1.html">人才招聘</a></li>
+                      
+                    <li><a href="/about/?53.html">联系我们</a></li>
+                      
+                </ul>
+            </div>
+            <div class="bf_three">
+                <h5>关注我们</h5>
+                <div class="ewm">
+                    <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/ewm.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="banquan">
+            <p>版权所有：{aspcms:companyname} &nbsp;&nbsp;&nbsp;&nbsp;备案号：赣ICP备13004751号&nbsp;&nbsp;&nbsp;&nbsp;  技术支持：<a href="http://app.dinfen.com/">书生商友</a> </p>
+        </div>
+    </div>

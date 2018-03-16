@@ -1,0 +1,26 @@
+<div class="ny_banner" style="border:1px solid #DEDEDE">
+<img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/" alt="">
+</div>
+
+<div class="ny_nav">
+	<div class="ny_nav_this" id="na">
+		<ul>
+			{aspcms:navlist type={aspcms:topsortid}}
+			<li ><a href="[navlist:link]" >[navlist:name]</a></li>
+			{/aspcms:navlist}
+		</ul>
+	</div>
+</div>
+<div class="mbx">
+	<p> 
+		首页{aspcms:position} >>[position:link]{/aspcms:position}
+	</p>
+</div>
+<script>
+	$(function(){
+		var len=$("#na ul li").length;
+		if(len==0){
+			$("#na").parent().remove();
+		}
+	})
+</script>

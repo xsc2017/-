@@ -1,88 +1,532 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
-<HTML xmlns="http://www.w3.org/1999/xhtml">
-<HEAD>
-<title>{aspcms:sitetitle}{aspcms:additiontitle}- Powered by ASPCMS V2</title>
-<meta name="Keywords" content="{aspcms:sitekeywords}" >
-<meta name="Description" content="{aspcms:sitedesc}" >
-<meta name="generator" content="ASPCMS! V2" />
-<meta name="author" content="ASPCMS! Team and Chancoo UI Team" />
-<meta name="copyright" content="2006-2013 Chancoo Inc." />
-<META http-equiv=X-UA-Compatible content=IE=EmulateIE7>
-<META http-equiv=Content-Type content="text/html; charset=gb2312">
-<META content="MSHTML 6.00.3790.4807" name=GENERATOR>
-<LINK href="/favicon.ico" rel="shortcut icon">
-<LINK media=screen href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/style.css" type=text/css rel=stylesheet>
-<LINK media=all href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/styles.css" type=text/css rel=stylesheet>
-<LINK media=all href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/pagenavi-css.css" type=text/css rel=stylesheet>
-<SCRIPT src="images/l10n.js" type=text/javascript></SCRIPT>
-<SCRIPT src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/jquery.js" type=text/javascript></SCRIPT>
-<SCRIPT src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/jquery.form.js" type=text/javascript></SCRIPT>
-<SCRIPT src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/images/scripts.js" type=text/javascript></SCRIPT>
-<SCRIPT type=text/javascript>
-	// Navigation Menu
-	$(function() {
-		$(".menu ul").css({display: "none"}); // Opera Fix
-		$(".menu li:first").addClass("homepage");
-		$(".menu li").hover(function(){
-			$(this).find('ul:first').css({visibility: "visible",display: "none"}).slideDown("normal");
-		},function(){
-			$(this).find('ul:first').css({visibility: "hidden"});
-		});
-	});
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>{aspcms:sitetitle}</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/css/index.css">
+  <script type="text/javascript" src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.themepunch.plugins.min.js"></script>
+  <script type="text/javascript" src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/jquery.themepunch.revolution.min.js"></script>
+  <script type="text/javascript" src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/index.js"></script>
+</head>
+<body>
+  {aspcms:top}
+  <div class="banner">
+    <div class="tp-banner-container">
+      <div class="tp-banner" >
+        <ul>
+        
+          <li data-transition="slotzoom-vertical"  data-slotamount="7">
+            <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/banner1.jpg" alt="Rev Full">
 
-	// Bookmark
-	function bookmark(title, url) {
-	  if (document.all)
-		window.external.AddFavorite(url, title);
-	  else if (window.sidebar)
-		window.sidebar.addPanel(title, url, "")
-}
-</SCRIPT>
-</HEAD>
+            <div class="tp-caption slider-text-title sft str" data-x="20" data-y="150" data-speed="1000" data-start="800" data-easing="easeOutCubic" data-end="6000" data-endspeed="500">
+           	引领建筑业 永为先行者
+            </div>
+          </li>
+          <li data-transition="boxslide" data-slotamount="7" data-masterspeed="300" >
+            <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/banner2.jpg"  alt="darkblurbg"   data-fullwidthcentering="on">
 
-<BODY>
-<DIV class=wrapper> {aspcms:top}
-  <DIV class=slideshow id=slideshow> {aspcms:slideb} </DIV>
-  <DIV class=clear></DIV>
-  <DIV class=featured>
-    <DIV class=containerTop></DIV>
-    <DIV class="containerContent homeContent">
-      <DIV class=news> {aspcms:type sort=1}
-        <H2><SPAN><A title="[type:name]" href="[type:link]">����&gt;&gt;</A></SPAN><A title="[type:name]" href="[type:link]">[type:name]</A> | [type:enname]</H2>
-        {/aspcms:type}
-        <UL>
-          {aspcms:content sort=1 num=11 order=order}
-          <LI><A title="[content:title]" href="[content:link]" {if:[content:isoutlink]} target="_blank"{end if}><font color="[content:titlecolor]">[[content:sortname]][content:title len=20]</font></A><SPAN>[content:date style=yy-m-d]</SPAN></LI>
-          {/aspcms:content}
-        </UL>
-      </DIV>
-      <DIV class=products> {aspcms:type sort=5}
-        <H2><SPAN><A title="[type:name]" href="[type:link]">����&gt;&gt;</A></SPAN><img src="[type:ico]"><A title="[type:name]" href="[type:link]">[type:name]</A> | [type:enname]</H2>
-        {/aspcms:type}
-        <UL>
-          {aspcms:content sort=5 num=4 order=order}
-          <LI><A title="[content:title]" href="[content:link]"><IMG class="attachment-small" title="[content:title]" alt="[content:title]" src="[content:pic]" /></A> <A class="product_name" title="[content:title]" href="[content:link]">[content:title]</A></LI>
-          {/aspcms:content}
-        </UL>
-      </DIV>
-      <DIV class=profile> {aspcms:type sort=19}
-        <H2><SPAN><A title="[type:name]" href="[type:link]">����&gt;&gt;</A></SPAN><A title="[type:name]" href="[type:link]">[type:name]</A> | [type:enname]</H2>
-        {/aspcms:type}
-        <DIV class=about-us>
-          <DIV> {aspcms:content sort=105 num=1 order=order}
-            <embed type="application/x-mplayer2" width="273" height="173" src="[content:videourl]"></embed>
-            {/aspcms:content}
-            {aspcms:about sort=19}<a href="[about:link]">[about:desc len=60]</a>{/aspcms:about}
-            <DIV class=clear></DIV>
-          </DIV>
-          <DIV class=clear></DIV>
-        </DIV>
-        <DIV class=clear></DIV>
-      </DIV>
-    </DIV>
-  </DIV>
-</DIV>
-<DIV class=clear></DIV>
-{aspcms:foot}
-</BODY>
-</HTML>
+            <div class="tp-caption lft stb stl" data-x="100" data-y="120" data-speed="1000" data-start="1000" data-easing="easeOutExpo" data-end="6000" data-endspeed="500">
+            <span>诚开金石 心力致远</span>
+            </div>
+          </li>
+          <li data-transition="slotzoom-horizontal"  data-slotamount="7">
+            <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/banner3.jpg" alt="Rev Full">
+
+            <div class="tp-caption lfr stb stl" data-x="500" data-y="120" data-speed="2000" data-start="1000" data-easing="easeOutExpo" data-end="6000" data-endspeed="500">
+             以质量谋发展  以精品求效益
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="box_one">
+    <div class="gonggao">
+      <dl>
+        <dt>
+          <p>最新动态：</p>
+        </dt>
+        <dd>
+          <div id="marquee2">
+            <ul>
+
+              {aspcms:content sort=4}
+                <li><a href="[content:link]"><p>[content:title]</p><span>[content:date style=yy-m-d]</span></a></li>
+              {/aspcms:content}
+            </ul>
+          </div>
+          <div class="tznaniu">
+            <a href="javascript:void(0);" id="goU"></a>
+            <a href="javascript:void(0);" id="goD"></a>
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="box_one">
+    <div class="box_one_top">
+      <div class="aa" id="lilist">
+            <a class="aa_one aa_two">
+              <h5><span class="iconfont">&#xe617;</span></h5>
+              <p>房屋建筑</p>
+            </a>
+            <a class="aa_three ">
+              <h5><span class="iconfont">&#xe604;</span></h5>
+              <p>市政道路</p>
+            </a>
+            <a class="aa_four">
+              <h5><span class="iconfont">&#xe623;</span></h5>
+              <p>园林景观</p>
+            </a>
+            <a class="aa_five">
+              <h5><span class="iconfont">&#xe669;</span></h5>
+              <p>装修幕墙</p>
+            </a>
+            <a class="aa_six">
+              <h5><span class="iconfont">&#xe63a;</span></h5>
+              <p>公路水利</p>
+            </a>
+            <a class="aa_seven">
+              <h5><span class="iconfont">&#xe624;</span></h5>
+              <p>消防机电</p>
+            </a>
+            <a class="aa_eight">
+              <h5><span class="iconfont">&#xe6d3;</span></h5>
+              <p>钢结构基地</p>
+            </a>
+            
+        </div>
+      </div>
+      <div class="box_onr_body">
+      <ul  class="bb">
+        
+        {aspcms:navlist type=55}
+			<li class="bb_one">
+		          <dl>
+		          <dt>
+		              <div class="bb_name">
+		                <img src="[navlist:pic]" >
+		              </div>
+		              <p>
+		                <span>[navlist:name]</span>
+		              </p>
+		            </dt>
+
+		            <dd>
+		              <h1>[navlist:enname]</h1>
+		              <h2>[navlist:name]</h2>
+		              <p> 
+		             	[navlist:desc]
+		              </p>
+		              <a href="[navlist:link]">查看更多 >></a>
+		            </dd>
+		          </dl>
+		        </li>
+     	     {/aspcms:navlist}
+      
+      
+     
+       
+     
+      </ul>
+    </div>
+  </div>
+  <div class="box_two">
+    <div class="box_two_this">
+      <div class="cc box_two_top">
+        <h5>新闻中心</h5>
+        <p class="gg">
+        <a href="/a/news/gsdt/" class="cc_two"><span>公司动态</span></a>
+        <a href="/a/news/tzgg/"><span>通知公告</span></a>
+        <a href="/a/news/hydt/"><span>行业动态</span></a>
+        </p>
+        <span><a href="/a/news/hydt/">more</a></span>
+      </div>
+      <div class="dd">
+          <div class="dd_two">
+            <div class="tabbox whip">
+              <div class="tabbox_this whip_this">
+                <div class="tab tab_this">
+                    <a href="javascript:;" class="on">tab1</a>
+                      <a href="javascript:;">tab2</a>
+                      <a href="javascript:;">tab3</a>
+                  </div>
+                <ul >
+                <li>
+                    <dl>
+                      <dt>
+                        <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/1-1p30911534h93.jpg">
+                      </dt>
+                      <dd>
+                        <h5>海力控股：“三八女神节”  给你好看！…</h5>
+                        <span>日期：2018-03-09</span>
+                        <p>在第108个三八国际劳动妇女节来临之际，海力控股集团有限公司组织开展以踏青…</p>
+                        <a href="/a/news/gsdt/564.html">查看更多 >></a>
+                      </dd>
+                    </dl>
+                  </li>
+<li>
+                    <dl>
+                      <dt>
+                        <img src="picture/1-1p30214330c61.jpg">
+                      </dt>
+                      <dd>
+                        <h5>海力控股：有一种力量叫“温暖”…</h5>
+                        <span>日期：2018-03-02</span>
+                        <p>2月28日，海力控股集团有限公司积极参与到由西湖区卫计委组织发起的献绵薄之…</p>
+                        <a href="/a/news/gsdt/561.html">查看更多 >></a>
+                      </dd>
+                    </dl>
+                  </li>
+<li>
+                    <dl>
+                      <dt>
+                        <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/1-1p302142920649.jpg">
+                      </dt>
+                      <dd>
+                        <h5>海力控股组织开展2018年“庆元宵 猜灯谜”主题活动…</h5>
+                        <span>日期：2018-03-02</span>
+                        <p>身小力不大，团结又勤劳，有时搬粮食，有时挖地道打一动物，行政部张英英兴…</p>
+                        <a href="/a/news/gsdt/562.html">查看更多 >></a>
+                      </dd>
+                    </dl>
+                  </li>
+  
+                </ul>
+              </div>
+            </div>
+            <ul class="lis_nav">
+              <!-- 注意一下li里面div跟label的class名每个都有 -->
+              <li>
+                <label class="label"><a href="/a/news/gsdt/517.html">海力首届摄影大赛“拍出美力，记录生活”圆…</a></label>
+                <div class="content">
+                  <span>日期：2018-02-08</span>
+                  <p>2017年9月29日2017年10月16日，海力控股首届摄影大赛 《拍出美力，记录生活》 圆… </p>
+                </div>
+              </li>
+<li>
+                <label class="label"><a href="/a/news/gsdt/128.html">【喜报】丨海力控股集团荣升建筑工程施工总…</a></label>
+                <div class="content">
+                  <span>日期：2017-11-24</span>
+                  <p>近日，住建部核准了新一批建设工程企业资质资格名单，海力控股集团喜获建筑… </p>
+                </div>
+              </li>
+<li>
+                <label class="label"><a href="/a/news/gsdt/106.html">当感恩节遇上生日会…</a></label>
+                <div class="content">
+                  <span>日期：2017-11-24</span>
+                  <p>昨天是一年一度的感恩节，海力也为 11-12月生日的小伙伴们举办了集体生日会。… </p>
+                </div>
+              </li>
+<li>
+                <label class="label"><a href="/a/news/gsdt/123.html">海力集团第三届工会员工大会…</a></label>
+                <div class="content">
+                  <span>日期：2017-09-08</span>
+                  <p>9月6日，海力控股集团召开了2017年度海力员工工会主席选举会议。集团干部职工… </p>
+                </div>
+              </li>
+<li>
+                <label class="label"><a href="/a/news/gsdt/122.html">我司荣获2016中国建筑业竞争力百强企业称号…</a></label>
+                <div class="content">
+                  <span>日期：2017-08-26</span>
+                  <p>中国建筑业协会召开2016年度中国建筑业双百强企业评价工作会议，专家组对申… </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <div>
+            <div  class="tabbox_one whip">
+              <div class="tabbox_one_this whip_this">
+                  <div class="tab_one tab_this">
+                    <a href="javascript:;" class="on">tab1</a>
+                      <a href="javascript:;">tab2</a>
+                      <a href="javascript:;">tab3</a>
+                  </div>
+                <ul >
+                  <li>
+                    <dl>
+                      <dt>
+                        <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/1-1p110095312h2.png">
+                      </dt>
+                      <dd>
+                        <h5>史佳亮、程艳金同志入党喜报…</h5>
+                        <span>日期：2018-02-24</span>
+                        <p>…</p>
+                        <a href="/a/news/tzgg/508.html">查看更多 >></a>
+                      </dd>
+                    </dl>
+                  </li>
+<li>
+                    <dl>
+                      <dt>
+                        <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/1-1p110095230646.png">
+                      </dt>
+                      <dd>
+                        <h5>集团荣获2013年公益慈善模范奖…</h5>
+                        <span>日期：2014-07-02</span>
+                        <p>集团公司获北京江西商会颁发的2013年公益慈善模范奖！…</p>
+                        <a href="/a/news/tzgg/503.html">查看更多 >></a>
+                      </dd>
+                    </dl>
+                  </li>
+  
+                </ul>
+              </div>
+            </div>
+            <ul class="lis_nav">
+              <!-- 这里面的div跟label的class名跟上面不一样，下面的也不一样注意下 -->
+              <li>
+                <label class="label_two"><a href="/a/news/tzgg/513.html">2017年春节放假通知…</a></label>
+                <div class="content_two">
+                  <span>日期：2017-01-17</span>
+                  <p>根据《国务院办公厅关于2017部分节假日安排的通知》，现将春节放假安排有关… </p>
+                </div>
+              </li>
+<li>
+                <label class="label_two"><a href="/a/news/tzgg/512.html">2016年集团员工体检（通知）…</a></label>
+                <div class="content_two">
+                  <span>日期：2016-11-29</span>
+                  <p>公司 2016 年度员工福利体检通知 公司各部门： 为保障员工的身体健康，增强企… </p>
+                </div>
+              </li>
+<li>
+                <label class="label_two"><a href="/a/news/tzgg/511.html">海力控股集团工程项目管理中心（通知）…</a></label>
+                <div class="content_two">
+                  <span>日期：2016-11-25</span>
+                  <p>海力控股集团工程项目管理中心 通 知 集团自营项目、各分公司： 关于认真开… </p>
+                </div>
+              </li>
+<li>
+                <label class="label_two"><a href="/a/news/tzgg/510.html">关于严禁上班期间上网从事与工作无关活动的…</a></label>
+                <div class="content_two">
+                  <span>日期：2016-05-16</span>
+                  <p>关于严禁上班期间上网从事与工作无关活动的通知 为进一步严肃公司工作纪律… </p>
+                </div>
+              </li>
+<li>
+                <label class="label_two"><a href="/a/news/tzgg/509.html">关于工程资金结算账户及工程款支付实施细则…</a></label>
+                <div class="content_two">
+                  <span>日期：2016-03-11</span>
+                  <p>本站 浏览数：2896 发布时间：2016-3-11 15:15:00 通 知 各分公司： 集团公司目前正… </p>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <div>
+            <div  class="tabbox_two whip">
+              <div class="tabbox_two_this whip_this">
+              <div class="tab_two tab_this">
+                  <a href="javascript:;" class="on">tab1</a>
+                    <a href="javascript:;">tab2</a>
+                    <a href="javascript:;">tab3</a>
+                </div>
+              <ul >
+                <li>
+                    <dl>
+                      <dt>
+                        <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/1-1p1091s01x22.png">
+                      </dt>
+                      <dd>
+                        <h5>装配式建筑达到多少才能评为AAA级？…</h5>
+                        <span>日期：2017-09-20</span>
+                        <p>住建部标准定额司 近日发布《装配式建筑评价标准（征求意见稿）》 内容：…</p>
+                        <a href="/a/news/hydt/451.html">查看更多 >></a>
+                      </dd>
+                    </dl>
+                  </li>
+<li>
+                    <dl>
+                      <dt>
+                        <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/1-1p124092420259.jpg">
+                      </dt>
+                      <dd>
+                        <h5>海力集团第三届工会员工大会…</h5>
+                        <span>日期：2017-09-08</span>
+                        <p>9月6日，海力控股集团召开了2017年度海力员工工会主席选举会议。集团干部职工…</p>
+                        <a href="/a/news/hydt/523.html">查看更多 >></a>
+                      </dd>
+                    </dl>
+                  </li>
+<li>
+                    <dl>
+                      <dt>
+                        <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/1-1p1091s4515t.png">
+                      </dt>
+                      <dd>
+                        <h5>信息化构筑规划行业新业态…</h5>
+                        <span>日期：2017-07-20</span>
+                        <p>中央城镇化工作会议、中央城市工作会议召开后，我国城市规划工作受到前所未…</p>
+                        <a href="/a/news/hydt/435.html">查看更多 >></a>
+                      </dd>
+                    </dl>
+                  </li>
+  
+              </ul>
+            </div>  
+            </div>
+                      
+            <ul class="lis_nav">
+            <li>
+                <label class="label_one"><a href="/a/news/hydt/541.html">全国用户满意工程——“共青鸭鸭产业创新基…</a></label>
+                <div class="content_one">
+                  <span>日期：2018-06-18</span>
+                  <p>5月12日，集团党支部书记王林根陪同江西省质量协会秘书长姜晓菲一行赴共青城… </p>
+                </div>
+              </li>
+<li>
+                <label class="label_one"><a href="/a/news/hydt/518.html">海力控股集团荣升建筑工程施工总承包特级资…</a></label>
+                <div class="content_one">
+                  <span>日期：2018-01-11</span>
+                  <p>近日，住建部核准了新一批建设工程企业资质资格名单，海力控股集团喜获建筑… </p>
+                </div>
+              </li>
+<li>
+                <label class="label_one"><a href="/a/news/hydt/452.html">中级建筑节能工程师行业职称评定条件…</a></label>
+                <div class="content_one">
+                  <span>日期：2017-09-21</span>
+                  <p>建筑节能工程师行业职称评定标准是为客观、公正、科学地评价建设工程领域各… </p>
+                </div>
+              </li>
+<li>
+                <label class="label_one"><a href="/a/news/hydt/450.html">住建部对失信被执行主体实行市场和行业限制…</a></label>
+                <div class="content_one">
+                  <span>日期：2017-09-18</span>
+                  <p>据住房城乡建设部网站消息，住建部近日制定《失信被执行人信用监督、警示和… </p>
+                </div>
+              </li>
+<li>
+                <label class="label_one"><a href="/a/news/hydt/448.html">桩基一般由什么组成…</a></label>
+                <div class="content_one">
+                  <span>日期：2017-09-15</span>
+                  <p>桩基一般由什么组成？以下带来关于桩基一般由什么组成，相关内容供以参考。… </p>
+                </div>
+              </li>
+  
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="box_big">
+    <div class="box_three">
+      <dl>
+        <dt>
+          <div class="cc">
+            <h5>关于我们</h5>
+            <span><a href="/about/?49.html">more</a></span>
+          </div>
+          <div class="tth_neq">
+            <p>
+             {aspcms:about sort=49}
+             [about:desc len=100]
+             {/aspcms:about}
+            </p>
+            <a href="/about/?49.html">
+              <span style="color:#daa520;">企业精神</span>：诚开金石，心力致远<br />
+			  <span style="color:#daa520;">企业使命</span>：以质量谋发展，以精品求效益<br />
+			  <span style="color:#daa520;">企业信奉</span>：努力创造成就，上品赢得信赖<br />
+			  <span style="color:#daa520;">企业追求</span>：质量第一、确保安全、关注环境、持续改进<br />
+			  <span style="color:#daa520;">企业恪守</span>：遵纪守法、诚信服务、信守合同、顾客满意<br />
+            </a>
+          </div>
+        </dt>
+        <dd>
+          <div class="cc">
+            <h5>公司视频</h5>
+            <span><a href="/a/about/comp/">more</a></span>
+          </div>
+          <div class="dth_neq">
+            <img src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/picture/1-1p1061a542j2.png" />
+          </div>
+        </dd>
+      </dl>
+    </div>
+    <div class="box_four">
+      <dl>
+        <dt>
+          友情链接：
+        </dt>
+        <dd>
+          <a href="javascript:void(0);" id="goUM"></a>
+          <a href="javascript:void(0);" id="goDM"></a>
+          <div id="marquee6">
+            <ul>
+            
+              <li><a href='http://www.jxjst.gov.cn/' target='_blank'>江西省住房和城乡建</a> |</li>
+              
+              <li><a href='http://www.海力集团.com/' target='_blank'>海力集团</a> |</li>
+              
+              <li><a href='http://www.jxsl.gov.cn/' target='_blank'>江西省水利厅</a> |</li>
+              
+              <li><a href='http://www.cacem.com.cn/index.html' target='_blank'>中国建设网</a> |</li>
+              
+              <li><a href='http://www.chinajsb.cn/' target='_blank'>中国建设报</a> |</li>
+              
+            </ul>
+          </div>
+        </dd>
+      </dl>
+    </div>
+  </div>
+  {aspcms:foot}
+</body>
+  <script type="text/javascript">
+    $(function() { 
+        $('.tp-banner').revolution({ 
+            delay:6000,
+          startwidth:1170,
+          startheight:650,
+          hideThumbs:0,
+          onHoverStop:"off",
+          fullWidth:"on",
+          forceFullWidth:"on" 
+        }); 
+    }); 
+
+  </script>
+<script src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/kxbdsupermarquee.js"></script>
+<script type="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/text/javascript" src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/motor.js"></script>
+<script type="text/javascript" src="{aspcms:sitepath}/Templates/{aspcms:defaulttemplate}/js/tabbox.js"></script>
+<script type="text/javascript">
+
+  $(function(){
+      $('#marquee2').kxbdSuperMarquee({
+        distance:880,
+        time:4,
+        btnGo:{left:'#goU',right:'#goD'},
+        direction:'left'
+      });
+
+      $('#marquee6').kxbdSuperMarquee({
+        isMarquee:true,
+        isEqual:false,
+        scrollDelay:30,
+        controlBtn:{left:'#goUM',right:'#goDM'},
+        direction:'left'
+      });
+    });
+
+  $(function(){
+           $('.aa a').hover(function(){
+             $(this).addClass('aa_two').siblings().removeClass('aa_two')
+               var index=$(this).index()
+                   $('.bb>li').hide()
+                   $('.bb>li:eq('+index+')').show()
+         });
+     });
+
+  $(function(){
+           $('.gg>a').hover(function(){
+             $(this).addClass('cc_two').siblings().removeClass('cc_two')
+               var index=$(this).index()
+                   $('.dd>div').hide()
+                   $('.dd>div:eq('+index+')').show()
+         });
+     });
+</script>
+</html>
